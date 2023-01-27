@@ -10,9 +10,9 @@ app.set('view engine', 'ejs');
 let myName = 'Hau Anh Huynh'; 
 
 app.get('/', async (req, res) => {
-//res.send('<!DOCTYPE html><html lang="en"><h1>Hello World, is it November?</h1>')
+//   res.send('<!DOCTYPE html><html lang="en"><h1>Hello World, is it November?</h1>')
 
-//res.send(myName);
+// res.send(myName);
 
   let result = await res.send(`<h3> Hi, ${ myName } </h3>`);
   
@@ -27,7 +27,7 @@ app.get('/show', (req, res) => {
     res.sendFile('index.html' , { root : __dirname});
 })
 
-console.log("before app dot get to slash ejs", myName);
+console.log("before app dont get to slash ejs", myName);
 
 app.get('/ejs', (req,res) => {
 
